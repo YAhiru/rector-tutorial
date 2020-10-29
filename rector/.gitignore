@@ -1,0 +1,11 @@
+.php_cs.cache
+.phpunit.result.cache
+vendor
+build
+
+.DS_Stor
+.idea
+
+.php-version
+
+composer.lock
