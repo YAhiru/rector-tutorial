@@ -9,4 +9,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->defaults()
         ->autowire()
         ->public();
+
+    $services->set(\Yahiru\RectorTutorialRector\AddTestAnnotationRector::class);
 };
