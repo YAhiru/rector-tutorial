@@ -14,9 +14,9 @@ final class UserTest extends TestCase
         $this->user = new User('test user', 20);
     }
 
-    public function testGetName() : void
+    public function testGetScreenName() : void
     {
-        $this->assertSame('test user', $this->user->getName());
+        $this->assertSame('test user', $this->user->getScreenName());
     }
 
     public function testGetAge() : void

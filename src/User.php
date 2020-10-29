@@ -5,19 +5,19 @@ namespace Yahiru\RectorTutorial;
 final class User
 {
     /** @var string */
-    private $name;
+    private $screenName;
     /** @var int */
     private $age;
 
-    public function __construct(string $name, int $age)
+    public function __construct(string $screenName, int $age)
     {
-        $this->name = $name;
+        $this->screenName = $screenName;
         $this->age = $age;
     }
 
-    public function getName() : string
+    public function getScreenName() : string
     {
-        return $this->name;
+        return $this->screenName;
     }
 
     public function getAge() : int
