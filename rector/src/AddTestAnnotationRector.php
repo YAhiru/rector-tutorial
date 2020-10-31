@@ -6,6 +6,7 @@ use PhpParser\Node;
 use PhpParser\Node\Stmt\ClassMethod;
 use PHPUnit\Framework\TestCase;
 use Rector\Core\Rector\AbstractRector;
+use Rector\Core\RectorDefinition\CodeSample;
 use Rector\Core\RectorDefinition\RectorDefinition;
 use Rector\NodeTypeResolver\Node\AttributeKey;
 
@@ -42,7 +43,9 @@ final class AddTestAnnotationRector extends AbstractRector
     }
 
     /**
-     * @return string[]
+     * @phpstan-return array<class-string<Node>>
+     *
+     * @return array<string>
      */
     public function getNodeTypes() : array
     {
@@ -65,7 +68,9 @@ final class AddTestAnnotationRector extends AbstractRector
 
         $phpDocInfo->addBareTag('@test');
 
-        $testName = \lcfirst(preg_replace('/\Atest/', '', $this->getName($node)));
+        $testName = \lcfirst(
+            (string) preg_replace('/\Atest/', '', (string) $this->getName($node))
+        );
         $node->name = new Node\Identifier($testName);
 
         return $node;
