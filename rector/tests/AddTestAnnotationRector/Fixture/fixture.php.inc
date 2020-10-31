@@ -7,10 +7,6 @@ class SomeTest extends \PHPUnit\Framework\TestCase
     {
         // do test
     }
-
-    protected function testSome2() : void
-    {
-    }
 }
 
 ?>
@@ -26,10 +22,6 @@ class SomeTest extends \PHPUnit\Framework\TestCase
     public function some() : void
     {
         // do test
-    }
-
-    protected function testSome2() : void
-    {
     }
 }
 
