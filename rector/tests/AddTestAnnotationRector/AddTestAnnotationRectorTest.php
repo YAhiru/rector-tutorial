@@ -12,17 +12,17 @@ final class AddTestAnnotationRectorTest extends AbstractRectorTestCase
     /**
      * @dataProvider provideData()
      */
-    public function test(SmartFileInfo $fileInfo): void
+    public function test(SmartFileInfo $fileInfo) : void
     {
         $this->doTestFileInfo($fileInfo);
     }
 
-    public function provideData(): Iterator
+    public function provideData() : Iterator
     {
         return $this->yieldFilesFromDirectory(__DIR__ . '/Fixture');
     }
 
-    protected function getRectorClass(): string
+    protected function getRectorClass() : string
     {
         return AddTestAnnotationRector::class;
     }
