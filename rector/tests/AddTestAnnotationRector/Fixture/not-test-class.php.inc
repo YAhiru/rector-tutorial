@@ -5,7 +5,6 @@ class NotTest
 {
     public function testSome() : void
     {
-        // do test
     }
 }
 
@@ -18,7 +17,6 @@ class NotTest
 {
     public function testSome() : void
     {
-        // do test
     }
 }
 
