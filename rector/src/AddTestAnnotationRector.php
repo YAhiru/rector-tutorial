@@ -69,7 +69,7 @@ final class AddTestAnnotationRector extends AbstractRector
         $phpDocInfo->addBareTag('@test');
 
         $testName = \lcfirst(
-            (string) preg_replace('/\Atest/', '', (string) $this->getName($node))
+            (string) \preg_replace('/\Atest/', '', (string) $this->getName($node))
         );
         $node->name = new Node\Identifier($testName);
 
